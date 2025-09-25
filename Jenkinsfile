@@ -4,8 +4,7 @@ pipeline{
 		stage("Deploy to webserver"){
 			steps{
 				sh '''
-					sudo cp -r * /var/www/html/
-					sudo systemctl restart nginx
+					cp -r * /var/www/html/
 				'''
 			}
 		}
